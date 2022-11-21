@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="figuras.css">
     <title>Figuras geometricas</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Realiza Operaciones con Figuras Geometricas</h1>
+        <p>Este es el primer taller de curso practico de JavaScritp</p>
     </header>
-    
+    <section class="section">
+        <form class="section__form" action=""> 
+            <h2 class="section__title">Calculos con el cuadrado</h2>
+            <label for="InputCuadrado">
+                Escribe cuanto mide cada lado de tu cuadrado:
+            </label>
+            <div>
+                <input id="InputCuadrado" type="number" placeholder="Medida en centimetros">
+                <button type="button" onclick="calculaPerimetroCudrado()">Calcula Perimetro</button>
+                <button type="button" onclick="calculaAreaCuadrado()">Calcula Área</button>
+            </div>
+        </form>
+    </section>
 
     <script src="figuras.js"></script>
 </body>
