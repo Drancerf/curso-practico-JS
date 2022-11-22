@@ -33,8 +33,7 @@ function perimetroTriangulo (lado1,  lado2, baseT){
 
 function areaTriangulo (lado1,  lado2, baseT){
     let semiperi= (lado1 + lado2 + baseT)/2;
-    let calcuAltura= semiperi * ((semiperi-lado1)+(semiperi-lado2)+(semiperi-baseT));
-    let alturaT= Math.sqrt(calcuAltura);
+    let alturaT=(2/lado1) * Math.sqrt(semiperi*(semiperi-lado1)*(semiperi-lado2)*(semiperi-baseT));
     return (baseT*alturaT)/2;
 }
 // console.log("El area del Triángulo es: "+ areaTriangulo + "cm°2");
@@ -85,14 +84,17 @@ function calculaAreaCuadrado(){
 //Conexion del Html con las funciones (Triangulo)
 function calculaPerimetroTriangulo(){
     let input1 =document.getElementById("InputTriangulo1");
-    let value1= input1;
-
+    let value1= input1.value;
+    value1= parseInt(value1);
+    
 
     let input2 =document.getElementById("InputTriangulo2");
     let value2= input2.value;
+    value2= parseInt(value2);
 
     let input3 =document.getElementById("InputTriangulo3");
     let value3= input3.value;
+    value3=parseInt(value3);
 
     let perimetro= perimetroTriangulo(value1, value2, value3);
     alert(perimetro);
@@ -100,12 +102,15 @@ function calculaPerimetroTriangulo(){
 function calculaAreaTriangulo(){
     let input1 =document.getElementById("InputTriangulo1");
     let value1= input1.value;
+    value1= parseInt(value1);
 
     let input2 =document.getElementById("InputTriangulo2");
     let value2= input2.value;
+    value2= parseInt(value2);
 
     let input3 =document.getElementById("InputTriangulo3");
     let value3= input3.value;
+    value3=parseInt(value3);
 
     let area=areaTriangulo(value1, value2, value3);
     alert(area);
