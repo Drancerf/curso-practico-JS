@@ -9,6 +9,9 @@ function calculoPrecioConDescuento (precio, descuento){
 }
 
 function clickPriceDiscount() {
+    let name = document.getElementById("inputNameP");
+    let nameP=name.value
+
     let price = document.getElementById("inputPrice");
     let valuePrice= price.value;
 
@@ -17,7 +20,7 @@ function clickPriceDiscount() {
 
     let priceDiscount=calculoPrecioConDescuento(valuePrice, valueDiscount);
     let resultP= document.getElementById("ResultP");
-    resultP.innerText= "El precio despues de aplicarle el descuento es " + priceDiscount+"$";
+    resultP.innerText= "El precio de "+ nameP+" después de aplicarle el descuento de "+valueDiscount+"% es de " + priceDiscount+"$";
 }
 // console.log({
 //     precioOriginal,
